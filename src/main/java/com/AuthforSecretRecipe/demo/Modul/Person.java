@@ -1,11 +1,16 @@
 package com.AuthforSecretRecipe.demo.Modul;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-public class Person {
+@JsonIgnoreProperties({"posts"})
+public class Person implements Serializable {
     @Id
     @GeneratedValue()
     private Long id;

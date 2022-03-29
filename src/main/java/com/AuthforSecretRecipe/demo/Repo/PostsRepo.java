@@ -7,9 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
-public interface personRepo extends JpaRepository<Person, Long> {
-    Person findByUserName(String username);
+public interface PostsRepo extends JpaRepository<Posts,Long> {
 
-    Person findByPosts(Posts posts);
 
 }
